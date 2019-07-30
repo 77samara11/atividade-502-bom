@@ -13,27 +13,29 @@
 
 
 let caixaTexto = document.querySelector("input");
-let botão = document.querySelector("button");
+let botao = document.querySelector("button");
 let texto= document.querySelector("p")
 let nãoSou= document.querySelector("a");
-let bemvinda= document.querySelector("h3")
+let bemvinda= document.querySelector("h1")
 
-
-function acessar(){
-    localStorage.setItem("nome", caixaTexto.value);
 }
 function  limpar(){
     localStorage.clear();
 }
 
-botão.onclick = acessar;
+botao.onclick = acessar;
 naoSou.onclick = limpar
 
 if (localStorage.nome){
-   alert("existe")
+    caixaTexto.style.display = 'none'
+    botao.style.display = 'none'
+    bemvinda.innerHTML = `seja bem vinda ${localStorage.nome}`
+    
 }
 else{
-    alert("no existe")
+    function acessar(){
+        localStorage.setItem("nome", caixaTexto.value);
+    }
 }
 
 
