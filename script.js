@@ -29,8 +29,6 @@ if (localStorage.nome){
     botao.style.display = 'none'
     bemvinda.innerHTML = `seja bem vinda ${localStorage.nome}`
     naoSou.innerHTML = `nao e ${localStorage.nome}?`
-
-    
 }
 else{
     function acessar(){
